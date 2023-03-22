@@ -603,14 +603,15 @@
                         <form class="form-block" id="form-newsletter" action="#newsletter">
                             <div class="form-group">
                                 <p class="d-block w500 c-branco pb-2">PODEMOS LIGAR PARA VOCÊ</p>
-                                <input class="form-control border-radius-20 border-cinza bg-cinzaClaro" id="newsemail" type="text" placeholder="Nome">
+                                <input class="form-control border-radius-20 border-cinza bg-cinzaClaro"  type="text" name="nome" placeholder="Nome">
                                 <!--<input class="form-control border-radius-20 border-cinza bg-cinzaClaro" id="newsemail" type="text" placeholder="Cidade" />-->
-                                <input class="form-control border-radius-20 border-cinza bg-cinzaClaro" id="newsemail" type="tel" placeholder="Telefone" />
-                                
-                                <button class="btn border-cinzaClaro border-radius-20 bg-cinzaClaro" type="submit" id="btn-cadastrar-newsletter">
+                                <input class="form-control border-radius-20 border-cinza bg-cinzaClaro"  type="tel" name="telefone" placeholder="Telefone" />
+                                <input type="hidden" name="_next" value="https://www.megasolarmt.com/enviado">
+                                <input type="hidden" name="_captcha" value="false">
+                                <button class="btn border-cinzaClaro border-radius-20 bg-cinzaClaro" type="submit" >
                                     <i class="fas fa-play c-laranja"></i>
                                 </button>
-                            </div> 
+                            </div>
                         </form>
                     </div>
                 </div>
