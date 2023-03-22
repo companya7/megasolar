@@ -31,37 +31,6 @@ $(document).ready(function(){
     $('#telefone').mask(behavior, options);
 
 
-    // Formulário de contato
-    $("#form-contato").submit( function(event){
-        event.preventDefault();
-        $.ajax({
-            type: 'post',
-            url: base_url + "enviacontato",
-            data: $('#form-contato').serialize(),
-            beforeSend: function(data){
-                $('#form-contato').hide();
-                $('#msg-status-faleconosco').html('Enviando. Aguarde.');
-                $('#msg-status-faleconosco').show();
-            },
-            success: function (data) {
-                if(data == 'ok'){
-                    $('#msg-status-faleconosco').html('Sua mensagem foi encaminhada com sucesso!<br>Em breve, lhe retornaremos.');
-                }else{
-                    $('#msg-status-faleconosco').html(data);
-                    $('#msg-status-faleconosco').show();
-                    $('#form-contato').show();
-                    setTimeout(function(){
-                        $('#msg-status-faleconosco').hide();
-                    },5000);
-                }
-            },
-            error: function(){
-                $('#form-contato').show();
-                alert('Erro ao enviar os dados. Tente novamente.');
-            }
-        });
-    });
-
     // Efeito de exibir o conteudo.
     new WOW().init();
 
